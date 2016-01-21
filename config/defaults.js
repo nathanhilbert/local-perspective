@@ -19,7 +19,7 @@ define({
     //Default configuration settings for the application. This is where you'll define things like a bing maps key,
     //default web map, default app color theme and more. These values can be overwritten by template configuration settings and url parameters.
     "appid": "",
-    "webmap": "9569a8b938c746359c1b4aa490476506", //"4ab11e3ebab04de6b04c42bbc102d3c0",
+    "webmap": "ec1506c947634330940a68d469ea317a", //"4ab11e3ebab04de6b04c42bbc102d3c0",
     "oauthappid": null, //"AFTKRmv16wj14N3z",
     //Group templates must support a group url parameter. This will contain the id of the group.
     //group: "",
@@ -51,7 +51,7 @@ define({
     
     // **************************** //
     // ** LOCAL PERSPECTIVE PARAMETERS **//
-    "showDemographics": true,
+    "showDemographics": false,
     "demographicsLabel": "Demographics",
     //"demographicsURL": "http://services.arcgisonline.com/arcgis/rest/services/Demographics/USA_Percent_Under_18/MapServer/1",
     //"demographicsFields": "TOTPOP_CY,POPL18_CY,POP65U_CY",
@@ -59,10 +59,10 @@ define({
     "demographicsURL": location.protocol + "//services.arcgis.com/80hk79qB8z45zcHi/ArcGIS/rest/services/US_Block_Group_Points/FeatureServer/0",
     "demographicsFields": "POP2010,MALES,FEMALES,HSE_UNITS",
     "demographicsAliases": "2010 Total Population,Male Population,Female Population,Housing Units",
-    "showLifestyle": true,
+    "showLifestyle": false,
     "lifestyleLabel": "Lifestyle",
     "lifestyleURL": location.protocol + "//services.arcgisonline.com/arcgis/rest/services/Demographics/USA_Tapestry/MapServer/1",
-    "showWeather": true,
+    "showWeather": false,
     "weatherLabel": "Weather",
     "weatherURL": "http://coolmaps.esri.com/Weather/info.php?v=1",
     "weatherLayerURL_Tiled" : "https://gisserver.accuweather.com/ESRITileServices2/tileRequest/AccuTileServices/LatestUSHiResRadar/N1dvRW9KUjNNK2tYWFp4Y1h6M2lCa2ZTRW5wMWJzeXdaamxIY3ZkRmcxVCs1YXdPaE1MckpBPT0=/MapServer/tile/{level}/{row}/{col}",
@@ -76,6 +76,7 @@ define({
     "defaultDistance": 3,
     "defaultZoomLevel": 14,
     "defaultToCenter": true,
+    "featureServices": "http://services6.arcgis.com/RXwE6Rr6OxsElADd/arcgis/rest/services/Stops/FeatureServer/0,http://services6.arcgis.com/RXwE6Rr6OxsElADd/arcgis/rest/services/ParkandRide_and_Railstations/FeatureServer/0,http://services6.arcgis.com/RXwE6Rr6OxsElADd/arcgis/rest/services/ParkandRide_and_Railstations/FeatureServer/1",
     // **************************** //
     
     // **************************** //

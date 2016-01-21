@@ -195,9 +195,19 @@ define([
             }).then(lang.hitch(this, function(response) {
 
                 this.config.response = response;
+                console.log(this.config);
                 this.map = response.map;
                 this.initExt = this.map.extent;
-                this.config.opLayers = response.itemInfo.itemData.operationalLayers;
+                this.config.opLayers = [];
+                this.config.featureServicesArray = this.config.featureServices.split(",");
+                array.forEach(response.itemInfo.itemData.operationalLayers, lang.hitch(this, function(layer) {
+                    array.forEach(this.config.featureServicesArray, lang.hitch(this, function(layerurl){
+                        if (layer.url === layerurl){
+                            this.config.opLayers.push(layer);
+                            return false;
+                        }
+                    }));
+                }));
 
                 this._createMapUI();
                 // make sure map is loaded

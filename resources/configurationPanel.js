@@ -122,6 +122,12 @@
                "label": "Default distance",
                "tooltip": "Default distance",
                "constraints" :{"min":1,"places":0}
+            },
+            {
+               "type" : "string",
+               "fieldName" : "featureServices",
+               "tooltip" : "List of feature services to use for filtering by buffer.  Separate by comma.",
+               "label" : "Feature Services"
             }
          ]
       }

@@ -199,6 +199,7 @@ define([
             this.config.opLayers.reverse();
             var me = this;
             array.forEach(this.config.opLayers, lang.hitch(this, function(layer) {
+                
                 var lyrId;
                 var lyrName;
                 var lyr;
